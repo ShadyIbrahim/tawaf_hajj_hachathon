@@ -1,0 +1,91 @@
+/* ----------------------------------------------------------------
+   Responsive 
+-----------------------------------------------------------------*/
+
+/* -------------------------------------------------------
+                     phone & tablet
+-------------------------------------------------------- */
+
+@media (max-width: 767px) {
+
+    .xs-mb-30{margin-bottom: 30px;}
+
+    .xs-mb-50{margin-bottom: 50px;}
+
+    .navbar .nav-item a {
+      text-align: center;
+    }
+
+    .navbar-nav {
+      border-top: 1px solid #ccc;
+    }
+
+    .header .caption h2 {
+      font-size: 40px;
+    }
+
+    .header .caption h6 {
+      font-size: 22px;
+    }
+
+    .header .caption h4 {
+      font-size: 15px;
+      letter-spacing: 1px;
+    }
+    
+    .section-title h3 {
+      font-size: 35px;
+    }
+
+    .testimonial .wp {
+      padding: 30px 15px;
+    }
+
+    .testimonial .wp .section-title {
+      margin-top: 0;
+    }
+
+    .testimonial .wp .section-title h4 {
+      font-size: 20px;
+    }
+
+    .footer .copyr , .footer .scoial-icon  {
+      text-align: center !important;
+    }
+
+    .contact-form input, .contact-form textarea {
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+
+}
+
+@media (max-width: 991px){
+
+  .sm-mb-30{margin-bottom: 30px;}
+
+  .sm-mb-50{margin-bottom: 50px;}
+
+  .about .part-img img {
+    margin-left: auto;
+  }
+
+  .about .part-img .after-box {
+    display: none;
+  }
+
+  .about .part-info {
+    padding-top: 0;
+  }
+
+  .about .bg-parallax {
+    display: none;
+  }
+
+  .rellax { transform: translate3d(0,0,0) !important; } 
+
+  .facts .bg-img {
+    display: none;
+  }
+
+}
