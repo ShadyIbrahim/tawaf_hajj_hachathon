@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-<main class="main-content ">
   <!-- Header
   ================================================== -->
   <header class="page-header">
@@ -57,7 +56,7 @@
                                         <label for="example-text-input" class="col-form-label">إسم المشرف</label>
                                         </div>
                                         <div class="col-10">
-                                            <select class="form-control" name="start_location" id="example-text-input" style="height: auto;">
+                                            <select class="form-control" name="supervisorName" id="example-text-input" style="height: auto;">
                                               <option value="محمدن حسن علي">محمدن حسن علي</option>
                                               <option value="محمود السيد بن علي">محمود السيد بن علي</option>
                                             </select>
@@ -71,6 +70,9 @@
                                             <select class="form-control" name="start_location" id="example-text-input" style="height: auto;">
                                               <option value="فندق أجياد">فندق أجياد</option>
                                               <option value="فندق أجياد">فندق الصفوة</option>
+                                              <option value="فندق الحرمين">فندق الحرمين</option>
+                                              <option value="فندق أطياف">فندق أطياف</option>
+                                              <option value="فندق زمردة">فندق زمردة</option>
                                             </select>
                                         </div>
                                     </div>
@@ -89,7 +91,7 @@
                                         <label for="example-date-input" class="col-form-label">التاريخ</label>
                                         </div>
                                         <div class="col-10">
-                                            <input class="form-control" name="plannedStartDate" type="date" value="2018-08-19" id="example-date-input">
+                                            <input class="form-control" name="plannedStartDate" type="date" value="2018-08-03" id="example-date-input">
                                         </div>
                                     </div>
                                     <div class="form-group row">
@@ -97,7 +99,7 @@
                                         <label for="example-time-input" class="col-form-label">التوقيت</label>
                                         </div>
                                         <div class="col-10">
-                                            <input class="form-control" name="plannedStartTime" type="time" value="13:45:00" id="example-time-input">
+                                            <input class="form-control" name="plannedStartTime" type="time" value="12:00:00" id="example-time-input">
                                         </div>
                                     </div>
                                     <!-- <div class="form-group row">
@@ -131,5 +133,5 @@
   <!-- End portfolio
   ================================================== -->
 
-</main>
+
 @endsection

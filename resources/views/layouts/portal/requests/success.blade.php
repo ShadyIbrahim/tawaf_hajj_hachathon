@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="discrption" content="parallax one page">
     <meta name="keyword" content="هاكثون الحج">
-<meta name="csrf-token" content="{{ csrf_token() }}">
+
     <title>هاكثون الحج  </title>
 
     <!-- Font Google -->
@@ -44,80 +44,24 @@
 
     <!-- Log in form
     ================================================== -->
-  <section class="bg-color margin">
-      <div class="container shadow my-4"> 
-        <!-- First Row -->
-        <div class="row d-flex justify-content-center flex-nowrap my-1 text-center">
+  <section class="margin extra" >
+    <div class="container">
+        <div class="row justify-content-center">
             <div class="text-center col-md-12 mb-2">
-                <img class="mb-1" src="{{ asset('frontendAsset/img/logo-login.png') }}" width="120" height="120"> 
-            </div>
-        </div>
-        <div class="row d-flex justify-content-center flex-nowrap my-1 px-4 text-center">
-          <div class="mx-1 col-lg-6 px-4 mx-4">
-            <form method="POST" action="{{ route('login') }}" aria-label="{{ __('Login') }}">
-                        @csrf
-            <div class="form-group row px-4 mx-4">
-
-                <label for="inputEmail " class="sr-only">لبريد الإلكتروني</label>
-                <input id="email" type="email" placeholder="البريد الإلكتروني" class="form-control my-3 {{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
-
-                                @if ($errors->has('email'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                <label for="inputPassword " class="sr-only">كلمة المرور</label>
-                <input id="password" type="password" placeholder="كلمة المرور" class="form-control my-3 {{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                <div class="checkbox mb-3">
-                    <label>
-                        <input value="remember-me" type="checkbox"> تذكرني
-                    </label>
-                    </div>
-                    <button class="btn btn-lg btn-primary btn-block" type="submit"> تسجيل الدخول</button>
+                <img class="mb-1" src="{{ asset('frontendAsset/img/logo-login.png')}} " width="120" height="120"> 
             </div>
           </div>
-          <!-- END col 6 -->
-        </div>
-        <!-- END Row -->
-      </div>
-    </section>
-      
+              <div class="text-center col-md-6 mx-auto">
+                @if(Session::has('success'))
+                   <h6  class="sucess-color py-3 mb-3"> {{ Session::get('success') }}</h6>
+                @endif
+                
 
-
-
-  <!-- <section class="bg-color margin section-padding">   
-     <div class="container justify-content-center">
-        <div class="row">
-            <div class="text-center col-md-12 mb-2">
-                <img class="mb-1" src="{{ asset('frontendAsset/img/logo-login.png') }}" width="120" height="120"> 
-            </div>
-          </div>
-          <div class="form-group row d-flex flex-nowrap">
-              <div class="col-lg-6 text-center">
-                <form class = "form-login">
-                    <label for="inputEmail " class="sr-only">Email address</label>     
-                    <input id="inputEmail " class="form-control my-3" placeholder="البريد الإلكتروني" required="" autofocus="" type="email">
-                    <label for="inputPassword " class="sr-only">Password</label>
-                    <input id="inputPassword " class="form-control my-3" placeholder="كلمة المرور" required="" type="password">
-                    <div class="checkbox mb-3">
-                        <label>
-                            <input value="remember-me" type="checkbox"> تذكرني
-                        </label>
-                        </div>
-                        <button class="btn btn-lg btn-primary btn-block" type="submit"> تسجيل الدخول</button>
-                  </form>
               </div>
-            </div>
            </div>
         </div>
     </div>
-  </section> -->
+  </section>
     
 
     <!-- End Log in form
@@ -154,7 +98,7 @@
   
   
       <!-- Optional JavaScript -->
-      <!-- jQuery first, then Popper.js') }}, then Bootstrap JS -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
       <script src="{{ asset('frontendAsset/js/jquery-3.0.0.min.js') }}"></script>
       <script src="{{ asset('frontendAsset/js/Migrate.js') }}"></script>
       <script src="{{ asset('frontendAsset/js/popper.min.js') }}"></script>

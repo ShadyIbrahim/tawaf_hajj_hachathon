@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<main class="main-content ">
+
         <!-- Header
         ================================================== -->
         <header class="page-header">
@@ -17,7 +17,7 @@
                     <p class="mb-20 text-center" style="text-align: center!important;margin: 0 auto">
                     هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر.
                     </p>
-                    <a href="{{ url('portal/requests/create') }}" class="btn"><span>إنشاء طلب جديد</span></a>
+                    <a href="{{ url('portal/requests/create') }}" class="p-3 btn btn-light"><span>إنشاء طلب جديد</span></a>
                   </div>
                 </div>
               </div>
@@ -68,7 +68,7 @@
                               <th>عددالطائفين</th>
                               <th>مكان الأنطلاق</th>
                               <th>المرشد </th>
-                              <th>  المطوف</th>
+                              <!-- <th>  المطوف</th> -->
                               <th>الاجراء</th>
                             </tr>
                           </thead>
@@ -85,10 +85,10 @@
                                     <img src="{{ asset('frontendAsset//img/csteam.png') }}">
                                     </div>
                                     </li>
-                                    <li> <span> عبدالله على </span></li>
+                                    <li> <span> {{ $request->supervisorName }} </span></li>
                                     </ul>
                                     </td>
-                                <td class="icon-tr">
+                                <!-- <td class="icon-tr">
                                     <ul>
                                     <li>
                                     <div class="img-tr">
@@ -97,8 +97,8 @@
                                     </li>
                                     <li> <span> محمد حسن علي </span></li>
                                     </ul>
-                                    </td>
-                              <td><a href="#" class="btn"><span>التفاصيل</span></a></td>
+                                    </td> -->
+                              <td><a href="{{ url('portal/requests/show/'.$request->id) }}" class="btn"><span>التفاصيل</span></a></td>
                             </tr>
                             @endforeach
                             <!-- <tr>
@@ -418,5 +418,5 @@
         <!-- End portfolio
         ================================================== -->
 
-      </main>
+
 @endsection

@@ -17,6 +17,7 @@ class CreateRequestsTable extends Migration
             $table->increments('id')->unsigned();
             $table->string('start_location', 255);
             $table->string('destination', 255);
+            $table->string('supervisorName', 255);
             $table->date('plannedStartDate');
             $table->time('plannedStartTime');
             $table->dateTime('expectedEndDate')->nullable();

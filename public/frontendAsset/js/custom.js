@@ -22,25 +22,25 @@ $(function () {
 
   /* navbar scrolling background and change logo
   -------------------------------------------------------*/
-  wind.on("scroll",function () {
+  // wind.on("scroll",function () {
 
-      var bodyScroll = wind.scrollTop(),
-          navbar = $(".navbar");
+  //     var bodyScroll = wind.scrollTop(),
+  //         navbar = $(".navbar");
 
-      if(bodyScroll > 300){
+  //     if(bodyScroll > 300){
 
-          navbar.addClass("nav-scroll");
-          $('.navbar-brand img').attr('src','assets/img/logo.png');
+  //         navbar.addClass("nav-scroll");
+  //         $('.navbar-brand img').attr('src','assets/img/logo.png');
 
 
-      }else{
+  //     }else{
 
-          navbar.removeClass("nav-scroll");
-          $('.navbar-brand img').attr('src','assets/img/logo-2.png');
+  //         navbar.removeClass("nav-scroll");
+  //         $('.navbar-brand img').attr('src','assets/img/logo-2.png');
 
-      }
+  //     }
 
-  });
+  // });
 
 
   function headHover() {

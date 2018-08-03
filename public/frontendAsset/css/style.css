@@ -215,8 +215,8 @@
 }
 
 .section-padding {
-  padding-top: 90px !important;
-  padding-bottom: 90px !important;
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
 }
 
 .mpl-0 {
@@ -746,13 +746,11 @@ html {
 
 body {
   text-align: right;
-  direction: rtl;
   line-height: 1.2;
   color: #888888;
   font-size: 15px;
   font-family: "Cairo", sans-serif;
-  height: 100%;
-  overflow-x: hidden;
+  min-height: 100vh !important;  
 }
 
 a {
@@ -794,7 +792,6 @@ h5,
 h6 {
   color: #151515;
   font-weight: 600;
-  line-height: 1.2;
   font-family: "Cairo", sans-serif;
   margin: 0;
 }
@@ -1188,59 +1185,7 @@ p {
           transform: translate3d(-10px, 0, 0) scale3d(0, 1, 1);
 }
 
-button.btn, a.btn {
-  position: relative;
-  background-color: #f5fafe;
-  padding: 15px 35px;
-  -webkit-box-shadow: 0px 4px 38px -6px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 4px 38px -6px rgba(0, 0, 0, 0.1);
-  border-left: 1px solid #2f91cd;
-  letter-spacing: 1px;
-  border-radius: 0;
-  color: #000;
-  font-size: 15px;
 
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
-
-}
-button.btn span, a.btn span {
-  display: inline-block;
-  position: relative;
-  z-index: 1;
-  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-
-}
-button.btn:after, a.btn:after {
-  content: "";
-  border-radius: 2px;
-  position: absolute;
-  top: -1px;
-  right: -1px;
-  bottom: -1px;
-  left: -1px;
-  background-color: #2f91cd;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  -webkit-transform-origin: center left;
-          transform-origin: center left;
-  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1) 0.075s, -webkit-transform 0.45s cubic-bezier(0.4, 0, 0.2, 1) 0.075s;
-}
-button.btn:hover span, a.btn:hover span {
-  color: #fff;
-  -webkit-transform: translateX(0.5rem);
-          transform: translateX(0.5rem);
-  -webkit-transition-delay: 0.075s;
-          transition-delay: 0.075s;
-}
-button.btn:hover:after, a.btn:hover:after {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
-  -webkit-transition-delay: 0s;
-          transition-delay: 0s;
-}
 
 .lg-icon {
   font-size: 50px !important;
@@ -1294,11 +1239,12 @@ button.btn:hover:after, a.btn:hover:after {
   top: 0;
   left: 0;
   right: 0;
-  min-height: 90px;
+  min-height: 50px;
   background: #fff;
   -webkit-box-shadow: 0 1px 8px 3px rgba(0, 0, 0, 0.0509803922);
           box-shadow: 0 1px 8px 3px rgba(0, 0, 0, 0.0509803922);
   z-index: 1111;
+  padding: 0px;
 }
 .navbar .navbar-brand {
   width: 100px;
@@ -1338,7 +1284,6 @@ button.btn:hover:after, a.btn:hover:after {
   padding: 0;
 }
 .navbar .nav-item:after {
-  content: '/';
   margin-right: 10px;
   color: #2f91cd;
 }
@@ -1359,8 +1304,7 @@ button.btn:hover:after, a.btn:hover:after {
 }
 .navbar .nav-item a {
   color: #333;
-  padding: 20px 8px 10px 2px;
-    text-align: center
+  text-align: center
 }
 .navbar .nav-item a:hover {
   background: transparent;
@@ -1695,7 +1639,7 @@ button.btn:hover:after, a.btn:hover:after {
   width: 100%;
   height: 35px;
   line-height: 35px;
-  background-color: #2f91cd;
+  background-color: #237caf !important;
   border-radius: 0px 0px 16px 16px;
   position: absolute;
   left: 0;
@@ -1962,15 +1906,27 @@ button.btn:hover:after, a.btn:hover:after {
   transition: all 0.2s;
 }
 .single-post .social .s-ul li a .youtube {
+  color: #fff;
+}
+.single-post .social .s-ul li a .youtube :hover {
   color: #C4302B;
 }
-.single-post .social .s-ul li a .facebook {
+.single-post .social .s-ul li a .facebook{
+  color: #fff;
+}
+.single-post .social .s-ul li a .facebook :hover {
   color: #3B5998;
 }
-.single-post .social .s-ul li a .twitter {
+.single-post .social .s-ul li a .twitter :hover {
+  color: #fff;
+}
+.single-post .social .s-ul li a .twitter :hover {
   color: #00ACEE;
 }
-.single-post .social .s-ul li a .instagram {
+.single-post .social .s-ul li a .instagram{
+  color: #fff;
+}
+.single-post .social .s-ul li a .instagram :hover {
   color: #3F729B;
 }
 .single-post .social .nex {
@@ -2796,21 +2752,20 @@ button.btn:hover:after, a.btn:hover:after {
 .icon-tr span{padding-right: 20px}
 .img-tr{height:50px;width: 50px;border-radius: 50%;border: 2px solid #2F91CD}
 .img-tr img{height:100%;width: 100%;border-radius: 50%}
-.taaf{font-size:30px;color:#21c6bb}
+.taaf{font-size:35px;color:#21c6bb}
 table{text-align: center}
 .moer-detail{border: 1px solid #21c6bb;padding:30px 20px;border-radius:2px }
 /* -------------------------------------------------------
                      footer
 -------------------------------------------------------- */
 .footer {
-  position: fixed;
+  position: scroll;
   bottom: 0;
   width: 100%;
-  background-color: #fff;
-
-    background: url(../img/f-bg.jpg);
+  background-color:#888888;
 }
-.tr{  background-color:rgba(32,167,250,.5);
+.tr{  
+  background-color:rgba(32,167,250,.5);
   padding-top: 20px;
   padding-bottom: 20px;}
 .footer .footer-top {
@@ -2844,7 +2799,7 @@ table{text-align: center}
 .footer .footer-top .item .newsletter__form .newsletter__email {
   font-weight: 400;
   width: 100%;
-  height: 60px;
+  height: 50px;
   padding: 0 1.5rem;
   background: #fff;
   border: 2px solid #2f91cd;
@@ -2879,7 +2834,6 @@ table{text-align: center}
 }
 .footer .footer-bottom p a {
   color: #fff;
-  padding: 0 5px;
 }
 .footer .footer-bottom .social-icon {
   position: relative;
@@ -2887,43 +2841,17 @@ table{text-align: center}
   text-align: left;
 }
 .footer .footer-bottom .social-icon a i {
-  padding: 10px 14px;
-  color: #546E7A;
+  padding: 15px 5px 15px 5px;
+  color: #fff;
   width: 52px;
   text-align: center;
   font-weight: 400;
-  font-size: 17px;
+  font-size: 16px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 .footer .footer-bottom .social-icon a i:hover {
-  color: white;
-  border-radius: 2px;
-  background: rgba(31, 31, 31, 0.05);
-}
-.footer .footer-bottom .social-icon a .youtube {
-  color: #C4302B;
-}
-.footer .footer-bottom .social-icon a .facebook {
-  color: #3B5998;
-}
-.footer .footer-bottom .social-icon a .twitter {
-  color: #00ACEE;
-}
-.footer .footer-bottom .social-icon a .instagram {
-  color: #3F729B;
-}
-.footer .footer-bottom .social-icon a:hover .youtube {
-  background-color: #C4302B;
-}
-.footer .footer-bottom .social-icon a:hover .facebook {
-  background-color: #3B5998;
-}
-.footer .footer-bottom .social-icon a:hover .twitter {
-  background-color: #00ACEE;
-}
-.footer .footer-bottom .social-icon a:hover .instagram {
-  background-color: #3F729B;
+  color: #21c6bb;
 }
 
 /* -------------------------------------------------------
@@ -3087,6 +3015,105 @@ table{text-align: center}
 
 
 
+
 /*# sourceMappingURL=style.css.map */
 
+[class*="col-"]{
+  border-radius: 3px
+}
+.form-login{
+  font-size: 14px !important;
+  width: 400px;
+  padding: 0px 50px 0px 50px;
+}
 
+.dashicons{
+  vertical-align: baseline;
+  font-size: 14px!important;
+}
+.right-sidebar{
+  height: auto;
+  width: 60px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  text-indent: -3px;
+  overflow-x: hidden;
+  margin-top: 250px;
+  padding: 45px 40px 45px 40px;
+}
+
+.font-small{
+  font-size: 14px;
+  font-weight: normal;
+  color: #333;
+}
+a{
+  padding: 0px 2px 0px 2px;
+  text-decoration: none !important;
+  font-size: 14px;
+  color: #000;
+  display: inline-block;
+
+}
+ .bg-color{
+   background-color: #F8F8F8;
+ }
+ .bg-danger{
+   background-color: #FE6271; 
+ }
+ .margin{
+  padding: 100px 0px 100px 0px;
+}
+.white{
+  background-color: #fff !important;
+}
+.table-font{
+  font-size: 16px;
+}
+table tr th {
+  width: 25%;
+}
+.font-white{
+  color: fff;
+}
+.table-sucess{
+  background-color: #e8f9f8;
+}
+.table-danger{
+  background-color: #fceff0;
+}
+.table-header-sucess{
+  color: #fff;
+  background: #21C6BC;
+}
+.table-header-danger{
+  color: #fff;
+  background: #c82333;
+}
+.sucess-color{
+  background-color: #21C6BC;
+  color: #fff;
+}
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+  background-color: #edf7fc;
+}
+.table-header{
+  color: #fff;
+  background: #3191CC;
+}
+.extra{
+  min-height: 100vh;
+}
+.sign-out-icon{
+  color: #21C6BC;
+}
+.request-info-font{
+  font-size: 12px;
+}
+.last{
+  line-height: 36px;
+  font-size: 18px;
+  font-weight: bold;
+}
